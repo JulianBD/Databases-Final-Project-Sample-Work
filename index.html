@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <div class="flex-small">
+        <div class="flex-row"><a href="users.html">Users page</a><a href="artists.html">Artists page</a></div>
+    </div>
+    <div class="container">
+        <h1>General Queries Using Billboard and Pitchfork Data</h1>
+        <h2>Queries for Pitchfork Review Data</h2>
+        <form action="topArtists.php" method="post">
+            <h3>Top Artists by Pitchfork Score:</h3>
+            <h4>Enter Num Artists:</h4>
+            <input type="number" name="num_artists"><br>
+            <input type="submit">
+        </form>
+
+        <form action="bottomArtists.php" method="post">
+            <h4>Bottom Artists by Pitchfork Score:</h4>
+            <h4>Enter Num Artists: <input type="number" name="num_artists"></h4>
+            <input type="submit">
+        </form>
+
+        <form action="averageGenreRatings.php" method="post">
+            <h3>Average Pitchfork Genre Scores:</h3>
+            <span>
+                <h4>Enter the genre:</h4>
+                <select name="in_genre">
+                    <option value="pop/r&b">pop/R&B</option>
+                    <option value="rap">rap</option>
+                    <option value="electronic">electronic</option>
+                    <option value="folk/country">folk/country</option>
+                    <option value="rock">rock</option>
+                    <option value="metal">metal</option>
+                    <option value="experimental">experimental</option>
+                    <option value="jazz">jazz</option>
+                    <option value="global">global</option>
+                </select>
+            </span> <span>
+                <h4>Enter a beginning year:</h4>
+                <input type="number" name="start_year">
+            </span>
+            <span>
+                <h4>Enter and ending year:</h4>
+                <input type="number" name="end_year">
+            </span>
+            <input type="submit">
+        </form>
+
+        <form action="averageReviewerScore.php" method="post">
+            <h3>Reviewer Average Ratings:</h3>
+            <input type="submit">
+        </form>
+
+        <form action="bestNewMusic.php" method="post">
+            <h3>Best New Music Averages:</h3>
+            <input type="submit">
+        </form>
+
+        <form action="whoPicksBest.php" method="post">
+            <h3>Who Decides Best New Music?:</h3>
+            <input type="submit">
+        </form>
+
+        <h2>Queries for Billboard Hot 100 Chart Data</h2>
+        <form action="mostPopularBillboard.php" method="post">
+            <h3>Most Popular Song for Year Range:</h3>
+            <span>
+                <h4>Enter a beginning year:</h4>
+                <input type="number" name="start_year">
+            </span>
+            <span>
+                <h4>Enter and ending year:</h4>
+                <input type="number" name="end_year">
+            </span>
+            <input type="submit">
+        </form>
+
+        <form action="songsBySubject.php" method="post">
+            <h3>Number of Charting Songs by Subject:</h3>
+            <span>
+                <h4>Enter the keyword:</h4>
+                <input type="text" name="in_keyword">
+            </span>
+            <span>
+                <h4>Enter a beginning year:</h4>
+                <input type="number" name="start_year">
+            </span>
+            <span>
+                <h4>Enter and ending year:</h4>
+                <input type="number" name="end_year">
+            </span>
+            <input type="submit">
+        </form>
+
+        <form action="mostFeaturedAlbums.php" method="post">
+            <h3>Who Decides Best New Music?:</h3>
+            <input type="submit">
+        </form>
+
+        <h2>Queries for Combined Pitchfork and Billboard Hot 100 Data</h2>
+        <form action="combinedScores.php" method="post">
+            <h3>Which songs ranking on some Billboard threshold appear on albums above some score threshold?:</h3>
+            <h4>Enter Rank Threshold (lower = better):</h4>
+            <input type="number" name="billboard_number"><br>
+            <h4>Enter Pitchfork Threshold (higher = better):</h4>
+            <input type="number" name="pithchfork_number"><br>
+            <input type="submit">
+        </form>
+
+        <form action="genreRanking.php" method="post">
+            <h3>Which genre has the highest ranking songs on Billboard?:</h3>
+            <input type="submit">
+        </form>
+
+        <form action="labelAvgRank.php" method="post">
+            <h3>Which record label produces tracks with the highest average rankings on Billboard?:</h3>
+            <input type="submit">
+        </form>
+
+        <form action="labelByGenre.php" method="post">
+            <h3>What is the genre makeup of music produced by each record label?:</h3>
+            <input type="submit">
+        </form>
+
+        <form action="avgBestNewMusic.php" method="post">
+            <h3>What is the average ranking of songs on Billboard whose albums receive Best New Music on Pitchfork?:</h3>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>
